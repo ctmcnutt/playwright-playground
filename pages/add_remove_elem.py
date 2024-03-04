@@ -1,5 +1,7 @@
+from playwright.sync_api import Page
+
 class AddRemoveElementsPage:
-    def __init__(self, page):
+    def __init__(self, page: Page):
         self.page = page
         self.url = "https://the-internet.herokuapp.com/add_remove_elements/"
         self.selectors = _Selectors()

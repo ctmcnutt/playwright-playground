@@ -20,3 +20,27 @@ def test_add_remove_elements_single_element(page):
     # And new button disappears upon click
     add_remove_elements_page.get_delete_button().click()
     assert add_remove_elements_page.get_delete_button().count() == 0
+
+# Test Case:
+# Given on the Add/Remove Elements page
+# When clicking 'Add' button multiple times
+# Then as many 'Delete' buttons are created
+# And clicking all delete buttons will remove them
+
+def test_add_remove_elements_multiple_elements(page):
+    add_remove_elements_page = AddRemoveElementsPage(page)
+    numElements = 10
+
+    # Given on the Add/Remove Elements page
+    add_remove_elements_page.visit()
+
+    # When clicking 'Add' button multiple times
+    # Then as many 'Delete' buttons are created
+    for x in range(numElements):
+        add_remove_elements_page.get_add_button().click()
+        assert add_remove_elements_page.get_delete_button().count() == x+1
+    
+    # And clicking all delete buttons will remove them
+    for x in range(numElements):
+        add_remove_elements_page.get_delete_button().first.click()
+        assert add_remove_elements_page.get_delete_button().count() == (numElements-1)-x
