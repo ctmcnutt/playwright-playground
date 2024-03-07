@@ -10,8 +10,7 @@ class SecurePage:
         self.page.goto(self.url)
 
     def verify_page_url(self):
-        current_url = self.page.url()
-        assert current_url == self.url, "Not on the Secure Logged In page."
+        assert self.page.url == self.url, "Not on the Secure Logged In page."
 
     def logout(self):
         self.page.click(self.selectors.LOGOUT_BUTTON)
