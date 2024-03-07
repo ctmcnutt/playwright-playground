@@ -2,9 +2,9 @@ from playwright.sync_api import Page
 
 class FormAuthPage:
     def __init__(self, page: Page):
-        self.selectors = _Selectors()
         self.page = page
         self.url = "https://the-internet.herokuapp.com/login"
+        self.selectors = _Selectors()
 
     def visit(self):
         return self.page.goto(self.url)
