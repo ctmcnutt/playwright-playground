@@ -19,7 +19,7 @@ class AddRemoveElementsPage:
         return self.get_delete_button().count()
 
     def verify_page_url(self):
-        assert self.page.url() == self.url, "Not on the Add/Remove Elements page."
+        assert self.page.url == self.url, "Not on the Add/Remove Elements page."
 
 class _Selectors: 
     ADD_BUTTON = "#content > .example > button"
