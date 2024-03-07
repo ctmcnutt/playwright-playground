@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 
+
 class AddRemoveElementsPage:
     def __init__(self, page: Page):
         self.page = page
@@ -21,6 +22,7 @@ class AddRemoveElementsPage:
     def verify_page_url(self):
         assert self.page.url == self.url, "Not on the Add/Remove Elements page."
 
-class _Selectors: 
+
+class _Selectors:
     ADD_BUTTON = "#content > .example > button"
     DELETE_BUTTON = "#elements > button"

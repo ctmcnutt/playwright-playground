@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 
+
 class SecurePage:
     def __init__(self, page: Page):
         self.page = page
@@ -18,6 +19,7 @@ class SecurePage:
     def get_status_banner(self):
         return self.page.locator(self.selectors.STATUS_BANNER)
 
-class _Selectors: 
+
+class _Selectors:
     LOGOUT_BUTTON = "a.button[href='/logout']"
     STATUS_BANNER = "#flash"
