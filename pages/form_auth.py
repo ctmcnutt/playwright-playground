@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 
+
 class FormAuthPage:
     def __init__(self, page: Page):
         self.page = page
@@ -20,7 +21,8 @@ class FormAuthPage:
     def get_status_banner(self):
         return self.page.locator(self.selectors.STATUS_BANNER)
 
-class _Selectors: 
+
+class _Selectors:
     USERNAME_INPUT = "#username"
     PASSWORD_INPUT = "#password"
     SUBMIT_BUTTON = "button[type='submit']"
