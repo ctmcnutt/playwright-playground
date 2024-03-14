@@ -12,5 +12,5 @@ jobs:
       - run: playwright install --with-deps
       - run: make run-headless
         env:
-          FORM_AUTH_USERNAME: ${{ secrets.FORM_AUTH_USERNAME }}
-          FORM_AUTH_PASSWORD: ${{ secrets.FORM_AUTH_PASSWORD }}
+          FORM_AUTHENTICATION_USERNAME: ${{ secrets.FORM_AUTHENTICATION_USERNAME }}
+          FORM_AUTHENTICATION_PASSWORD: ${{ secrets.FORM_AUTHENTICATION_PASSWORD }}
