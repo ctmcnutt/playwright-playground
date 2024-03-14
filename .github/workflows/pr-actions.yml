@@ -1,0 +1,19 @@
+name: pr-actions
+on:
+  pull_request:
+    branches:
+      - 'main'
+jobs:
+  Run-Playwright-PR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependences
+        run: make install-dependencies
+      - name: Install Playwright Browsers
+        run: playwright install --with-deps
+      - name: Run Tests
+        run: make run-headless
+        env:
+          FORM_AUTHENTICATION_USERNAME: ${{ secrets.FORM_AUTHENTICATION_USERNAME }}
+          FORM_AUTHENTICATION_PASSWORD: ${{ secrets.FORM_AUTHENTICATION_PASSWORD }}
