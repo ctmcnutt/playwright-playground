@@ -14,11 +14,11 @@ This project demonstrates skills in building a test automation suite from scratc
 
 2. **(Optional) Set up virtual environment**
 
-  ```bash
-  cd playwright-playground
-  python3 -m venv venv
-  source myenv/bin/activate
-  ```
+    ```bash
+    cd playwright-playground
+    python3 -m venv venv
+    source myenv/bin/activate
+    ```
 
 3. **Install dependencies:**
 
