@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: make install-dependencies
+      - run: playwright install --with-deps
       - run: make run-headless
         env:
           FORM_AUTH_USERNAME: ${{ secrets.FORM_AUTH_USERNAME }}
