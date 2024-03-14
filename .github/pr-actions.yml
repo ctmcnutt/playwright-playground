@@ -4,7 +4,7 @@ on:
     branches:
       - 'main'
 jobs:
-  Run-Cypress-PR:
+  Run-Playwright-PR:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
