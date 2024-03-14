@@ -1,0 +1,15 @@
+name: pr-actions
+on:
+  pull_request:
+    branches:
+      - 'main'
+jobs:
+  Run-Cypress-PR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make install-dependencies
+      - run: make run-headless
+        env:
+          FORM_AUTH_USERNAME: ${{ secrets.FORM_AUTH_USERNAME }}
+          FORM_AUTH_PASSWORD: ${{ secrets.FORM_AUTH_PASSWORD }}
