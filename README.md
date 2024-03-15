@@ -10,20 +10,22 @@ This project demonstrates skills in building a test automation suite from scratc
 
    ```bash
    git clone https://github.com/ctmcnutt/playwright-playground
+   cd playwright-playground
    ```
 
 2. **(Optional) Set up virtual environment**
 
     ```bash
-    cd playwright-playground
+
     python3 -m venv venv
-    source myenv/bin/activate
+    source venv/bin/activate
     ```
 
-3. **Install dependencies:**
+3. **Install dependencies & browsers:**
 
    ```bash
    make install-dependencies
+   make install-browsers
    ```
 
 4. **Configure .env**
@@ -54,6 +56,11 @@ Execute the following commands to run the tests:
   ```bash
   make run-headed-slow
   ```
+
+### CI/CD
+- This project is regularly being run on GitHub Actions. You can see the recent runs [here](https://github.com/ctmcnutt/playwright-playground/actions)
+- It is currently executed (headlessly) in the following situations:
+  - On PR Creation/Update
 
 ### Folder Structure
 

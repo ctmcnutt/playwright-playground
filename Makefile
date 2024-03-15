@@ -4,6 +4,9 @@ run-formatter:
 install-dependencies:
 	pip3 install -r requirements.txt
 
+install-browsers:
+	playwright install --with-deps
+
 run-headless:
 	python3 -m pytest tests
 
