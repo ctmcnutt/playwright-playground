@@ -57,6 +57,11 @@ Execute the following commands to run the tests:
   make run-headed-slow
   ```
 
+### CI/CD
+- This project is regularly being run on GitHub Actions. You can see the recent runs [here](https://github.com/ctmcnutt/playwright-playground/actions)
+- It is currently executed (headlessly) in the following situations:
+  - On PR Creation/Update
+
 ### Folder Structure
 
 - `/pages/`: Page objects
