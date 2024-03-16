@@ -8,17 +8,18 @@ from pages.file_upload import FileUploadPage
 
 def test_file_upload_successful(page):
     file_upload_page = FileUploadPage(page)
+    test_file = "Test.txt"
 
     # Given on the Add/Remove Elements page
     file_upload_page.visit()
 
     # When uploading a valid file
-    file_upload_page.choose_file("Test.txt")
+    file_upload_page.choose_file(test_file)
     file_upload_page.click_upload_button()
 
     # Then successful file upload result
     assert file_upload_page.get_result_output().is_visible()
-    assert file_upload_page.get_result_output().inner_text() == "Test.txt"
+    assert file_upload_page.get_result_output().inner_text() == test_file
 
 
 # Test Case:
